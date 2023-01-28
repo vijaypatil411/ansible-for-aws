@@ -1,0 +1,22 @@
+#region
+region: "ap-south-1"
+
+# VPC
+vpc_cidr: 172.20.0.0/16
+vpc_name: "Ansible-VPC"
+
+# Subnet
+subnet_cidr-pub1a: 172.20.0.0/24
+subnet_cidr-pub1b: 172.20.1.0/24
+subnet_cidr-pub1c: 172.20.2.0/24
+subnet_cidr-pri1a: 172.20.3.0/24
+subnet_cidr-pri1b: 172.20.4.0/24
+subnet_cidr-pri1c: 172.20.5.0/24
+
+#zones
+zone1: ap-south-1a
+zone2: ap-south-1b
+zone3: ap-south-1c
+
+#state
+state: present
