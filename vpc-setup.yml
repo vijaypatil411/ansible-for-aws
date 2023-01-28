@@ -1,1 +1,17 @@
-cccc1111
+- name: create vpc
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: get variable file path
+      inclue_vars: vpc-setup-var
+    - name: create VPC
+      ec2_vpc_net:
+        name: "{{ vpc_name }}"
+        cidr_block: "{{ vpc_cidr }}"
+        region: "{{ region }}"
+        dns_support: yes
+        dns_hostnames: yes
+        tenancy: default
+        state: present
+      register: vpcout
